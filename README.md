@@ -2,6 +2,10 @@
 
 通过搜狗输入法的自定义短语，快速输入processing代码
 
+效果如下
+
+![image](https://github.com/processinghub/quick-code/blob/master/data/Video_2018-11-14_083232.gif)
+
 
 序言
 
