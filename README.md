@@ -4,7 +4,7 @@
 
 效果如下
 
-![image](https://github.com/processinghub/quick-code/blob/master/data/Video_2018-11-14_083232.gif)
+![image](https://github.com/processinghub/quick-code/blob/master/data/Video_2018-11-14_150250.gif)
 
 
 序言
