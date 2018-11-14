@@ -1,0 +1,388 @@
+﻿;  搜狗输入法--自定义短语配置文件
+
+;  自定义短语说明：
+;  1、自定义短语支持多行、空格、指定位置。
+;  2、每条自定义短语最多支持30000个汉字，总共支持100000条自定义短语。
+;  3、自定义短语的格式如下：
+
+;  单行的格式：
+;  字符串+英文逗号+数字（指定排序位置）=短语
+
+;  多行的格式：
+;  字符串+英文逗号+数字（指定排序位置）=
+;  多行短语
+
+;  具体格式可以参考下面的实例。
+;  4、最多支持100000行自定义短语。
+;  5、自定义短语的用途有：快捷输入手机号、邮箱、诗词、小短文等，大家可以自由发挥。
+;  6、时间函数功能。具体定义格式如下：;  字符串+英文逗号+数字（指定排序位置）=#表达式
+;  注意：表达式以英文#开头，后面的表达式中的每一个函数的前面都包含有英文$。
+;  函数表如下：
+;  函数    	含义    	举例
+;  $year    	年(4位) 	2006、2008
+;  $year_yy	年(2位) 	06、08
+;  $month     	月      	12、8、3
+;  $month_mm  	月      	12、08、03		//此函数在输入法3.1版之后（含）有效
+;  $day     	日      	3、13、22
+;  $day_dd	日	       03、13、22	//此函数在输入法3.1版之后（含）有效
+;  $weekday 	星期    	0、1、2、5、6
+;  $fullhour	时(24小时制)  	2、8、13、23
+;  $fullhour_hh	时(24小时制)  	02、08、13、23		//此函数在输入法3.1版之后（含）有效
+;  $halfhour	时(12小时制)	2、8、10、11
+;  $halfhour_hh	时(12小时制)	02、08、10、11		//此函数在输入法3.1版之后（含）有效
+;  $ampm    	AM、PM(英)	AM、PM（大写）
+;  $minute  	分      	02、08、15、28
+;  $second  	秒      	02、08、15、28
+;  $year_cn 	年(中文4位)	二〇〇六
+;  $year_yy_cn	年(中文2位)	〇六
+;  $month_cn	月(中文)	十二、八、三
+;  $day_cn  	日(中文)	三、十三、二十二
+;  $weekday_cn 	星期(中文)	日、一、二、五、六
+;  $fullhour_cn	时(中文24时制)	二、八、十三、二十三
+;  $halfhour_cn	时(中文12时制)	二、八、一、十一
+;  $ampm_cn 	上午下午(中文)	上午、下午
+;  $minute_cn	分(中文)	零二、零八、十五、二十八
+;  $second_cn	秒(中文)	零二、零八、十五、二十八
+;  具体你可以参考这个文件最下面的例子，实际体验一下就明白了。
+;  你可以用自定义短语来做一个带动态时间的多行回信落款。
+;  ss,1=#$year年$month月$day_dd日 $fullhour:$minute:$second
+
+a,1=abs()
+ac,1=acos()
+al,1=alpha()
+am,1=ambient()
+amb,1=ambientLight()
+ap,1=append()
+app,1=applyMatrix()
+ar,1=arc()
+arr,1=arrayCopy()
+arra,1=ArrayList
+as,1=asin()
+at,1=atan()
+ata,1=atan2()
+b,1=background()
+be,1=beginCamera()
+beg,1=beginContour()
+begi,1=beginRaw()
+begin,1=beginRecord()
+begins,1=beginShape()
+bez,1=bezier()
+bezi,1=bezierDetail()
+bezie,1=bezierPoint()
+bezier,1=bezierTangent()
+bezierv,1=bezierVertex()
+bi,1=binary()
+bl,1=blend()
+ble,1=blendMode()
+blu,1=blue()
+bo,1=boolean
+boo,1=boolean()
+box,1=box()
+br,1=break
+bri,1=brightness()
+bu,1=BufferedReader
+by,1=byte()
+c,1=camera()
+ca,1=case
+cat,1=catch
+ce,1=ceil()
+ch,1=char
+cha,1=char()
+cl,1=class
+cle,1=clear()
+cli,1=clip()
+co,1=color()
+col,1=color
+colo,1=colorMode()
+con,1=concat()
+cons,1=constrain()
+cont,1=continue
+cop,1=copy()
+cos,1=cos()
+cr,1=createFont()
+cre,1=createGraphics()
+crea,1=createImage()
+creat,1=createInput()
+create,1=createOutput()
+creater,1=createReader()
+creates,1=createShape()
+createw,1=createWriter()
+cu,1=cursor()
+cur,1=curve()
+curv,1=curveDetail()
+curve,1=curvePoint()
+curvet,1=curveTangent()
+curveti,1=curveTightness()
+curvev,1=curveVertex()
+d,1=day()
+de,1=default
+deg,1=degrees()
+del,1=delay()
+di,1=directionalLight()
+dis,1=displayDensity()
+dist,1=dist()
+do,1=double
+dou,1=DoubleDict
+doub,1=DoubleList
+dr,1=draw()
+e,1=ellipse()
+el,1=ellipseMode()
+els,1=else
+em,1=emissive()
+en,1=endCamera()
+end,1=endContour()
+endr,1=endRaw()
+endre,1=endRecord()
+ends,1=endShape()
+ex,1=exit()
+exp,1=exp()
+expa,1=expand()
+ext,1=extends
+f,1=fill()
+fi,1=filter()
+fin,1=final
+fl,1=float
+flo,1=float()
+floa,1=FloatDict
+float,1=FloatList
+floo,1=floor()
+fo,1=focused
+for,1=for
+fr,1=frameCount
+fra,1=frameRate
+fram,1=frameRate()
+fru,1=frustum()
+fu,1=fullScreen()
+g,1=get()
+gr,1=green()
+h,1=HALF_PI
+ha,1=HashMap
+he,1=height
+hex,1=hex()
+ho,1=hour()
+hu,1=hue()
+i,1=if
+im,1=image()
+ima,1=imageMode()
+imp,1=implements
+impo,1=import
+in,1=int
+int,1=int()
+intd,1=IntDict
+intl,1=IntList
+j,1=join()
+js,1=JSONArray
+jso,1=JSONObject
+k,1=key
+ke,1=keyCode
+key,1=keyPressed
+keyp,1=keyPressed()
+keyr,1=keyReleased()
+keyt,1=keyTyped()
+l,1=launch()
+le,1=lerp()
+ler,1=lerpColor()
+li,1=lightFalloff()
+lig,1=lights()
+ligh,1=lightSpecular()
+lin,1=line()
+lo,1=loadBytes()
+loa,1=loadFont()
+load,1=loadImage()
+loadj,1=loadJSONArray()
+loadjs,1=loadJSONObject()
+loadp,1=loadPixels()
+loads,1=loadShader()
+loadsh,1=loadShape()
+loadst,1=loadStrings()
+loadt,1=loadTable()
+loadx,1=loadXML()
+log,1=log()
+lon,1=long
+long,1=LongDict
+longl,1=LongList
+loo,1=loop()
+m,1=mag()
+ma,1=map()
+mat,1=match()
+matc,1=matchAll()
+max,1=max()
+mi,1=millis()
+min,1=min()
+minu,1=minute()
+mo,1=modelX()
+mod,1=modelY()
+mode,1=modelZ()
+mon,1=month()
+mou,1=mouseButton
+mous,1=mouseClicked()
+mouse,1=mouseDragged()
+mousem,1=mouseMoved()
+mousep,1=mousePressed
+mousepr,1=mousePressed()
+mouser,1=mouseReleased()
+mousew,1=mouseWheel()
+mousex,1=mouseX
+mousey,1=mouseY
+n,1=new
+nf,1=nf()
+nfc,1=nfc()
+nfp,1=nfp()
+nfs,1=nfs()
+no,1=noClip()
+noc,1=noCursor()
+nof,1=noFill()
+noi,1=noise()
+nois,1=noiseDetail()
+noise,1=noiseSeed()
+nol,1=noLights()
+nolo,1=noLoop()
+nor,1=norm()
+norm,1=normal()
+nos,1=noSmooth()
+nost,1=noStroke()
+not,1=noTint()
+nu,1=null
+o,1=Object
+or,1=ortho()
+p,1=parseJSONArray()
+pa,1=parseJSONObject()
+par,1=parseXML()
+pe,1=perspective()
+pf,1=PFont
+pg,1=PGraphics
+pi,1=PI
+pim,1=PImage
+pix,1=pixelDensity()
+pixe,1=pixelHeight
+pixel,1=pixels[]
+pixelw,1=pixelWidth
+pm,1=pmouseX
+pmo,1=pmouseY
+po,1=point()
+poi,1=pointLight()
+pop,1=popMatrix()
+pops,1=popStyle()
+pow,1=pow()
+pr,1=print()
+pri,1=printArray()
+prin,1=printCamera()
+print,1=println()
+printm,1=printMatrix()
+printp,1=printProjection()
+printw,1=PrintWriter
+priv,1=private
+ps,1=PShader
+psh,1=PShape
+pu,1=public
+pus,1=pushMatrix()
+push,1=pushStyle()
+pv,1=PVector
+q,1=quad()
+qu,1=quadraticVertex()
+quar,1=QUARTER_PI
+r,1=radians()
+ra,1=random()
+ran,1=randomGaussian()
+rand,1=randomSeed()
+re,1=rect()
+rec,1=rectMode()
+red,1=red()
+redr,1=redraw()
+req,1=requestImage()
+res,1=resetMatrix()
+rese,1=resetShader()
+ret,1=return
+rev,1=reverse()
+ro,1=rotate()
+rot,1=rotateX()
+rota,1=rotateY()
+rotat,1=rotateZ()
+rou,1=round()
+s,1=saturation()
+sa,1=save()
+sav,1=saveBytes()
+save,1=saveFrame()
+savej,1=saveJSONArray()
+savejs,1=saveJSONObject()
+saves,1=saveStream()
+savest,1=saveStrings()
+savet,1=saveTable()
+savex,1=saveXML()
+sc,1=scale()
+scr,1=screenX()
+scre,1=screenY()
+scree,1=screenZ()
+se,1=second()
+sel,1=selectFolder()
+sele,1=selectInput()
+selec,1=selectOutput()
+set,1=set()
+sett,1=settings()
+setu,1=setup()
+sh,1=shader()
+sha,1=shape()
+shap,1=shapeMode()
+she,1=shearX()
+shea,1=shearY()
+shi,1=shininess()
+sho,1=shorten()
+si,1=sin()
+siz,1=size()
+sm,1=smooth()
+so,1=sort()
+sp,1=specular()
+sph,1=sphere()
+sphe,1=sphereDetail()
+spl,1=splice()
+spli,1=split()
+split,1=splitTokens()
+spo,1=spotLight()
+sq,1=sq()
+sqr,1=sqrt()
+st,1=static
+str,1=str()
+stri,1=String
+strin,1=StringDict
+string,1=StringList
+stro,1=stroke()
+strok,1=strokeCap()
+stroke,1=strokeJoin()
+strokew,1=strokeWeight()
+su,1=subset()
+sup,1=super
+sw,1=switch
+t,1=Table
+ta,1=TableRow
+tan,1=tan()
+tau,1=TAU
+te,1=text()
+tex,1=textAlign()
+text,1=textAscent()
+textd,1=textDescent()
+textf,1=textFont()
+textl,1=textLeading()
+textm,1=textMode()
+texts,1=textSize()
+textu,1=texture()
+textur,1=textureMode()
+texture,1=textureWrap()
+textw,1=textWidth()
+th,1=this
+thr,1=thread()
+ti,1=tint()
+tr,1=translate()
+tri,1=triangle()
+trim,1=trim()
+try,1=try
+tu,1=ture
+tw,1=TWO_PI
+u,1=unbinary()
+un,1=unhex()
+up,1=updatePixels()
+v,1=vertex()
+vo,1=void
+w,1=while
+wi,1=width
+x,1=XML
+y,1=year()
