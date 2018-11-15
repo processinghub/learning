@@ -1,0 +1,691 @@
+;  搜狗输入法--processing补全代码
+;  创建时间：20181114
+;  参与编辑：竹兄，可爱小汗
+;  QQ群：422856731
+;  欢迎参与编辑，在群里申请编辑权限
+;  安全：防止文档丢失等BUG存在，每天备份 ,  如发生意外，请到github查看
+;  github论坛：https://github.com/processinghub/quick-code
+
+;  更新时间：20181115
+
+ab,1=abs();
+ac,1=acos();
+al,1=alpha();
+am,1=ambient();
+amb,1=ambientLight();
+ap,1=append();
+app,1=applyMatrix();
+a,1=
+arc(width/2,height/2,23,23,0,PI,OPEN);	
+//PI HALF_PI QUARTER_PI TAU TWO_PI
+//OPEN CHORD PIE
+array,1=arrayCopy();
+arr,1=ArrayList<al> als = new ArrayList<al>();
+as,1=asin();
+at,1=atan();
+ata,1=atan2();
+au,1=
+//麦克风输入
+import processing.sound.*;    
+                            
+AudioIn ai;                             
+Amplitude ampl;     
+                            
+void setup()    
+{
+    size(666,233);      
+                            
+    ai = new AudioIn(this,0);   
+    ai.play();      
+                            
+    ampl = new Amplitude(this);     
+    ampl.input(ai);    
+}
+                            
+void draw()     
+{
+    float v = ampl.analyze();                          
+}         
+b,1=background(233,0,0,255);
+beginc,1=beginCamera();
+beg,1=beginContour();
+begi,1=beginRaw();
+begin,1=beginRecord();
+be,1=
+beginshape();
+  vertex(width/2,height/2);
+  vertex(66,66);   
+  vertex(233,233);    
+  vertex(520,520);    
+endshape(CLOSE);
+bez,1=bezier(85, 20, 10, 10, 90, 90, 15, 80);
+bezi,1=bezierDetail();
+bezie,1=bezierPoint();
+bezier,1=bezierTangent();
+bezierv,1=bezierVertex();
+bi,1=binary();
+blen,1=blend();
+ble,1=blendMode();
+bl,1=blue();
+bo,1=boolean bl = ture;	//false
+boo,1=boolean();
+box,1=box();
+br,1=break;
+bri,1=brightness();
+bu,1=BufferedReader;
+by,1=byte b = 23;
+cam,1=camera();
+ca,1=case;
+cat,1=catch;
+ce,1=ceil();
+ch,1=char c = 'A';
+cl,1=
+class newc1
+{
+  
+  newc1()
+  {
+
+  }
+
+  void newv1()
+  {
+
+  }
+}
+cle,1=clear();
+cli,1=clip();
+c,1=color;
+co,1=color(233,0,0,255);	//#FFCC00;
+colo,1=colorMode(HSB,360,100,100);
+con,1=concat();
+cons,1=constrain(x,0,233);
+cont,1=continue;
+cop,1=copy();
+cos,1=cos();
+cr,1=createFont();
+cre,1=createGraphics();
+crea,1=createImage();
+creat,1=createInput();
+create,1=createOutput();
+creater,1=createReader();
+creates,1=createShape();
+createw,1=createWriter();
+cu,1=cursor();
+cur,1=curve();
+curv,1=curveDetail();
+curve,1=curvePoint();
+curvet,1=curveTangent();
+curveti,1=curveTightness();
+curvev,1=curveVertex();
+da,1=day();
+de,1=default;
+deg,1=degrees();
+del,1=delay();
+di,1=directionalLight();
+dis,1=displayDensity();
+d,1=dist(x1,y1,x2,y2);
+do,1=double dou = 3.1415D;  //小数点后面64位
+dou,1=DoubleDict;
+doub,1=DoubleList;
+dr,1=draw();
+dxf,1=
+import processing.dxf.*;
+
+boolean record;
+
+void setup() 
+{
+  size(666, 233, P3D);
+}
+
+void draw() 
+{
+  if (record) 
+ {
+    beginRaw(DXF, "xxx.dxf");
+  }
+
+  if (record) 
+  {
+    endRaw();
+    record = false;
+  }
+}
+
+void keyPressed() 
+{
+  if (key == 'r') 
+  {
+  	record = true;
+  }
+}
+e,1=ellipse(width/2,height/2,23,23);
+el,1=ellipseMode();
+els,1=else;
+em,1=emissive();
+en,1=endCamera();
+end,1=endContour();
+endr,1=endRaw();
+endre,1=endRecord();
+ends,1=endShape();
+ex,1=exit();
+exp,1=exp();
+expa,1=expand();
+ext,1=extends;
+f,1=fill(233,0,0,255);
+fi,1=filter();
+fin,1=final;
+fl,1=float flo = 3.14; //小数点后面32位
+flo,1=float();
+floa,1=FloatDict;
+float,1=FloatList;
+floo,1=floor();
+foc,1=focused;
+fo,1=
+for(int i=0; i<xxx.length; i++)  //< > == 
+{
+
+}
+fr,1=frameCount;
+fra,1=frameRate;
+fram,1=frameRate();
+fru,1=frustum();
+fu,1=fullScreen();
+gif,1=
+//p5导出gif
+import gifAnimation.*;
+GifMaker gifExport;
+
+float x; 
+
+void setup() 
+{
+  size(666,233);
+  frameRate(30);
+
+  gifExport = new GifMaker(this, "xxx.gif");
+  gifExport.setRepeat(0);        
+  gifExport.setTransparent(0,0,0);  
+
+}
+
+void draw() 
+{
+  background(0);
+  
+  stroke(233,0,0,255);
+  translate(width/2,height/2);
+  rotate(x++);
+  line(0,0,23,23); 
+
+  gifExport.setDelay(1);
+  gifExport.addFrame();
+  if(x % 5 == 0)  //通过余数实现动画录制
+  {
+    gifExport.finish();
+  } 
+}
+gifin,1=
+//p5读取gif
+import gifAnimation.*;
+Gif myAnimation;
+
+void setup() 
+{
+    size(666,233);
+    myAnimation = new Gif(this, "xxx.gif");
+    myAnimation.play();
+}
+
+void draw() 
+{
+    image(myAnimation, 10, 10);
+}
+
+ge,1=get();
+g,1=green();
+ha,1=HALF_PI;  //PI HALF_PI QUARTER_PI TAU TWO_PI
+has,1=HashMap;
+h,1=height;
+hex,1=hex();
+ho,1=hour();
+hu,1=hue();
+i,1=
+if(xxx < yyy)	//!= < <= == > >= ! && || 
+{
+
+}
+if,1=
+if(xxx < yyy)	//!= < <= == > >= ! && || 
+{
+
+}
+else if(xxx < yyy)
+{
+
+}
+else
+{
+
+}
+im,1=image();
+ima,1=imageMode();
+imp,1=implements;
+impo,1=import;
+in,1=int i = 23;  //最多32位
+int,1=int();
+intd,1=IntDict;
+intl,1=IntList;
+j,1=join();
+js,1=JSONArray;
+jso,1=JSONObject;
+ke,1=key;
+key,1=keyCode;
+k,1=keyPressed;
+//键盘控制上下左右
+if(keyPressed && key == CODED){
+    if(keyCode == LEFT){
+      x--;
+    }else if(keyCode == RIGHT){
+      x++;
+    }else if(keyCode == UP){
+      y--;
+    }else if(keyCode == DOWN){
+      y++;
+    }
+  }
+keyp,1=keyPressed();
+keyr,1=keyReleased();
+keyt,1=keyTyped();
+la,1=launch();
+le,1=lerp();
+ler,1=lerpColor();
+li,1=lightFalloff();
+lig,1=lights();
+ligh,1=lightSpecular();
+l,1=line(width/2,height/2,23,23);
+load,1=loadBytes();
+loa,1=loadFont();
+lo,1=loadImage();
+loadj,1=loadJSONArray();
+loadjs,1=loadJSONObject();
+loadp,1=loadPixels();
+loads,1=loadShader();
+loadsh,1=loadShape();
+loadst,1=loadStrings();
+loadt,1=loadTable();
+loadx,1=loadXML();
+log,1=log();
+lon,1=long l = 233;  //最多64位
+long,1=LongDict;
+longl,1=LongList;
+loo,1=loop();
+mag,1=mag();
+ma,1=map(x,0,width,0,1);
+mat,1=match();
+matc,1=matchAll();
+max,1=max();
+mi,1=millis();
+min,1=min();
+minu,1=minute();
+model,1=modelX();
+mod,1=modelY();
+mode,1=modelZ();
+mon,1=month();
+mouseb,1=mouseButton;
+mous,1=mouseClicked();
+mouse,1=mouseDragged();
+mousem,1=mouseMoved();
+mou,1=mousePressed;
+mousepr,1=mousePressed();
+mouser,1=mouseReleased();
+mousew,1=mouseWheel();
+m,1=mouseX,mouseY;
+ne,1=new;
+nf,1=nf();
+nfc,1=nfc();
+nfp,1=nfp();
+nfs,1=nfs();
+no,1=noClip();
+noc,1=noCursor();
+n,1=noFill();
+noi,1=noise();
+nois,1=noiseDetail();
+noise,1=noiseSeed();
+nol,1=noLights();
+nolo,1=noLoop();
+nor,1=norm();
+norm,1=normal();
+nos,1=noSmooth();
+nost,1=noStroke();
+not,1=noTint();
+nu,1=null;
+o,1=Object;
+or,1=ortho();
+pro,1=processing
+pars,1=parseJSONArray();
+pa,1=parseJSONObject();
+par,1=parseXML();
+pdf,1=
+import processing.pdf.*;
+//其他方式查看官网
+
+void setup() 
+{
+  size(666, 233);
+  noLoop();
+  beginRecord(PDF, "xxx.pdf"); 
+}
+
+void draw() 
+{
+
+  endRecord();
+}
+png,1=save("xxx.png");
+pe,1=perspective();
+pf,1=
+PFont f;    
+
+void setup()  
+{
+    size(666,233);  
+    f = createFont( "宋体", 24, true);  
+}
+                                                    
+void draw()    
+{
+    textFont(f,36);     
+    fill(0);   
+    text("你好p5" ,width/2,height/2);            
+}
+pg,1=PGraphics;
+pi,1=PI;  //PI HALF_PI QUARTER_PI TAU TWO_PI
+p,1=
+PImage img;    
+
+void setup()    
+{
+    size(666,233);
+    img = loadImage("xxx.png");  
+}
+                                            
+void draw()  
+{
+    image(img,0,0);      
+}
+pix,1=pixelDensity();
+pixe,1=pixelHeight;
+pixel,1=pixels[];
+pixelw,1=pixelWidth;
+pm,1=pmouseX,pmouseY;
+po,1=point(width/2,height/2);
+poi,1=pointLight();
+pop,1=popMatrix();
+pops,1=popStyle();
+pow,1=pow();
+pr,1=print();
+pri,1=printArray();
+prin,1=printCamera();
+print,1=println("out"+);
+printm,1=printMatrix();
+printp,1=printProjection();
+printw,1=PrintWriter;
+priv,1=private;
+ps,1=PShader;
+psh,1=PShape;
+pub,1=public;
+pu,1=
+pushMatrix();
+  translate(width/2,height/2);
+popMatrix();
+push,1=pushStyle();
+pv,1=PVector;
+q,1=quad(width/2,height/2,23,23,97,97,158,158);
+qu,1=quadraticVertex();
+quar,1=QUARTER_PI;
+rad,1=radians();
+ra,1=random(0,233);
+ran,1=randomGaussian();
+rand,1=randomSeed();
+r,1=rect(width/2,height/2,23,23,0,0,0,0);  
+re,1=rectMode(CENTER);
+red,1=red();
+redr,1=redraw();
+req,1=requestImage();
+res,1=resetMatrix();
+rese,1=resetShader();
+ret,1=return;
+rev,1=reverse();
+ro,1=rotate();
+rot,1=rotateX();
+rota,1=rotateY();
+rotat,1=rotateZ();
+rou,1=round();
+sat,1=saturation();
+sa,1=save("logo.png");
+sav,1=saveBytes();
+save,1=saveFrame("logo-######.png");
+savej,1=saveJSONArray();
+savejs,1=saveJSONObject();
+saves,1=saveStream();
+savest,1=saveStrings();
+savet,1=saveTable();
+savex,1=saveXML();
+sc,1=scale();
+scr,1=screenX();
+scre,1=screenY();
+scree,1=screenZ();
+sec,1=second();
+sel,1=selectFolder();
+sele,1=selectInput();
+selec,1=selectOutput();
+set,1=set();
+sett,1=settings();
+se,1=setup();
+sh,1=shader();
+sha,1=shape();
+shap,1=shapeMode();
+she,1=shearX();
+shea,1=shearY();
+shi,1=shininess();
+sho,1=shorten();
+sin,1=sin();
+si,1=size();
+sm,1=smooth();
+sor,1=sort();
+so,1=
+//播放音频
+import processing.sound.*;      
+                            
+SoundFile s;    
+                                    
+void setup()  
+{
+    size(233,233);      
+    s = new SoundFile(this,"xxx.mp4");   
+    s.play();    
+}
+                                    
+void draw()    
+{
+            
+}         
+sp,1=specular();
+sph,1=sphere();
+sphe,1=sphereDetail();
+spl,1=splice();
+spli,1=split();
+split,1=splitTokens();
+spo,1=spotLight();
+sq,1=sq();
+sqr,1=sqrt();
+sta,1=static;
+st,1=str();
+str,1=String str = "hello processing";
+stri,1=StringDict;
+strin,1=StringList;
+s,1=stroke(233,0,0,255);
+stro,1=strokeCap();
+strok,1=strokeJoin();
+stroke,1=strokeWeight();
+su,1=subset();
+sup,1=super;
+svg,1=
+//svg导出
+import processing.svg.*;
+//其他方式查看官网
+
+void setup() 
+{
+  size(666, 233, SVG, "xxx.svg");
+}
+
+void draw() 
+{
+  
+  exit();
+}
+svgin,1=
+//svg导入
+import processing.svg.*;
+PShape circle;
+void setup() 
+{
+  size(666, 233);
+  circle = loadShape("xxx.svg");
+}
+
+void draw() 
+{
+  shape(circle,width/2,height/2,66,66);
+}
+sw,1=
+switch(xxx) 
+{
+case 'A':                        
+break;
+                            
+case 'B': 
+break;
+                            
+default:
+break;
+}
+tab,1=Table;
+ta,1=TableRow;
+tan,1=tan();
+tau,1=TAU;  //PI HALF_PI QUARTER_PI TAU TWO_PI
+t,1=text();
+text,1=textAlign();
+texta,1=textAscent();
+textd,1=textDescent();
+textf,1=textFont();
+textl,1=textLeading();
+te,1=textMode();
+tga,1=save("xxx.tga");
+tex,1=textSize();
+textu,1=texture();
+textur,1=textureMode();
+texture,1=textureWrap();
+textw,1=textWidth();
+th,1=this;
+thr,1=thread();
+ti,1=tint();
+tif,1=save("xxx.tif");
+tr,1=translate();
+tri,1=triangle(width/2,height/2,23,23,97,97);
+trim,1=trim();
+try,1=try;
+tu,1=ture;
+tw,1=TWO_PI;  //PI HALF_PI QUARTER_PI TAU TWO_PI
+u,1=unbinary();
+un,1=unhex();
+up,1=updatePixels();
+ve,1=vertex();
+v,1=
+void newV1()
+{
+
+}
+vo,1=
+void setup()
+{
+  size(666,233);
+}
+
+void draw()
+{
+
+}
+voi,1=
+void setup()
+{
+  size(666,233,P2D);
+}
+
+void draw()
+{
+
+}
+void,1=
+void setup()
+{
+  size(666,233,P3D);
+}
+
+void draw()
+{
+
+}
+vi,1=
+//摄像头
+import processing.video.*;    
+                            
+Capture video; 
+                            
+void setup()      
+{
+    size(233,233);  
+    video = new Capture(this,320,240,30);   
+    video.start();      
+}
+                            
+void draw()   
+{
+    if(video.available())  video.read();       
+                            
+    image(video,0,0);   
+}  
+vid,1=
+//视频播放
+import processing.video.*;    
+
+Movie video;    
+                            
+void setup()    
+{
+    size(666,233);  
+    video = new Movie(this, "xxx.mp4");  
+    video.play();   
+}
+                            
+void draw()    
+{
+    if(video.available())  video.read(); 
+                            
+    image(video,0,0);    
+}  
+wh,1=while;
+w,1=width,height;
+wi,1=width
+x,1=x
+xm,1=XML;
+x+,1=x++;  //% + - * / ++ -- += /=
+x-,1=x--;  //% + - * / ++ -- += /=
+y,1=y
+y+,1=y++;  //% + - * / ++ -- += /=
+y-,1=y--;  //% + - * / ++ -- += /=
+ye,1=year(12);
+
