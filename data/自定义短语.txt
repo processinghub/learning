@@ -6,7 +6,7 @@
 ;  安全：防止文档丢失等BUG存在，每天备份 ,  如发生意外，请到github查看
 ;  github论坛：https://github.com/processinghub/quick-code
 
-;  更新时间：20181115
+;  更新时间：20181119
 
 ab,1=abs();
 ac,1=acos();
@@ -79,6 +79,7 @@ ca,1=case;
 cat,1=catch;
 ce,1=ceil();
 ch,1=char c = 'A';
+cha,1=charAt(i); 
 cl,1=
 class newc1
 {
@@ -162,7 +163,11 @@ void keyPressed()
 }
 e,1=ellipse(width/2,height/2,23,23);
 el,1=ellipseMode();
-els,1=else;
+els,1=
+else
+{
+
+}
 em,1=emissive();
 en,1=endCamera();
 end,1=endContour();
@@ -188,8 +193,7 @@ for(int i=0; i<xxx.length; i++)  //< > ==
 
 }
 fr,1=frameCount;
-fra,1=frameRate;
-fram,1=frameRate();
+fra,1=frameRate(24);
 fru,1=frustum();
 fu,1=fullScreen();
 gif,1=
@@ -202,11 +206,12 @@ float x;
 void setup() 
 {
   size(666,233);
-  frameRate(30);
+  frameRate(30);	//每秒钟几张图
+  noCursor();	//隐藏鼠标
 
   gifExport = new GifMaker(this, "xxx.gif");
   gifExport.setRepeat(0);        
-  gifExport.setTransparent(0,0,0);  
+  gifExport.setTransparent(0,255,0);  //指定颜色为透明（红色，绿色，蓝色）  
 
 }
 
@@ -247,7 +252,7 @@ ge,1=get();
 g,1=green();
 ha,1=HALF_PI;  //PI HALF_PI QUARTER_PI TAU TWO_PI
 has,1=HashMap;
-h,1=height;
+h,1=height
 hex,1=hex();
 ho,1=hour();
 hu,1=hue();
@@ -273,7 +278,7 @@ im,1=image();
 ima,1=imageMode();
 imp,1=implements;
 impo,1=import;
-in,1=int i = 23;  //最多32位
+in,1=int x = 23;  //最多32位
 int,1=int();
 intd,1=IntDict;
 intl,1=IntList;
@@ -283,6 +288,7 @@ jso,1=JSONObject;
 ke,1=key;
 key,1=keyCode;
 k,1=keyPressed;
+keyin,1=
 //键盘控制上下左右
 if(keyPressed && key == CODED){
     if(keyCode == LEFT){
@@ -492,8 +498,8 @@ shea,1=shearY();
 shi,1=shininess();
 sho,1=shorten();
 sin,1=sin();
-si,1=size();
-sm,1=smooth();
+si,1=size(666,233);
+sm,1=smooth(1);
 sor,1=sort();
 so,1=
 //播放音频
@@ -578,7 +584,7 @@ ta,1=TableRow;
 tan,1=tan();
 tau,1=TAU;  //PI HALF_PI QUARTER_PI TAU TWO_PI
 t,1=text();
-text,1=textAlign();
+text,1=textAlign(CENTER); 	//CENTER, LEFT, RIGHT
 texta,1=textAscent();
 textd,1=textDescent();
 textf,1=textFont();
@@ -682,10 +688,5 @@ w,1=width,height;
 wi,1=width
 x,1=x
 xm,1=XML;
-x+,1=x++;  //% + - * / ++ -- += /=
-x-,1=x--;  //% + - * / ++ -- += /=
-y,1=y
-y+,1=y++;  //% + - * / ++ -- += /=
-y-,1=y--;  //% + - * / ++ -- += /=
 ye,1=year(12);
 
