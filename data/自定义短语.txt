@@ -1,12 +1,12 @@
 ;  搜狗输入法--processing补全代码
-;  创建时间：20181114
+;  创建时间：20190121
 ;  参与编辑：竹兄，可爱小汗
 ;  QQ群：422856731
 ;  欢迎参与编辑，在群里申请编辑权限
 ;  安全：防止文档丢失等BUG存在，每天备份 ,  如发生意外，请到github查看
 ;  github论坛：https://github.com/processinghub/quick-code
 
-;  更新时间：20181120
+;  更新时间：20181119
 
 ab,1=abs();
 ac,1=acos();
@@ -52,12 +52,12 @@ beg,1=beginContour();
 begi,1=beginRaw();
 begin,1=beginRecord();
 be,1=
-beginshape();
+beginShape();
   vertex(width/2,height/2);
   vertex(66,66);   
   vertex(233,233);    
   vertex(520,520);    
-endshape(CLOSE);
+endShape(CLOSE);
 bez,1=bezier(85, 20, 10, 10, 90, 90, 15, 80);
 bezi,1=bezierDetail();
 bezie,1=bezierPoint();
@@ -595,7 +595,7 @@ textu,1=texture();
 textur,1=textureMode();
 texture,1=textureWrap();
 textw,1=textWidth();
-th,1=this;
+th,1=this
 thr,1=thread();
 ti,1=tint();
 tif,1=save("xxx.tif");
@@ -608,7 +608,7 @@ tw,1=TWO_PI;  //PI HALF_PI QUARTER_PI TAU TWO_PI
 u,1=unbinary();
 un,1=unhex();
 up,1=updatePixels();
-ve,1=vertex();
+ve,1=vertex(width/2,height/2);
 v,1=
 void newV1()
 {
@@ -682,10 +682,9 @@ void draw()
                             
     image(video,0,0);    
 }  
-wh,1=while;
-w,1=width,height;
+wh,1=while
+w,1=width/2,height/2
 wi,1=width
 x,1=x
 xm,1=XML;
 ye,1=year(12);
-
