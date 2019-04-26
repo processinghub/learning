@@ -402,10 +402,10 @@ void draw()
 
 ;  框架 → 绘制形状----------------------------------------------------------
 
-beginShape(LINES);	//不填写, LINES ,
+beginShape(LINES);	//不填写, ,POINTS , LINES , TRIANGLES, TRIANGLE_STRIP, TRIANGLE_FAN, QUADS, QUAD_STRIP
   vertex(width *0.5,height *0.5);
   vertex(width *0.5,height *0.5);       
-endShape(CLOSE);	//不填写, OPEN,CLOSE
+endShape(CLOSE);	//不填写,CLOSE
 
 
 ;  框架 → 功能框架----------------------------------------------------------
